@@ -14,8 +14,12 @@
             justify-content: center;
         }
         .angka2 {
-            margin-top: 1rem;
-            margin-bottom: 1rem
+            margin-bottom: 0.5rem
+        }
+        form .error{
+            color: red;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
         }
     </style>
 </head>
@@ -26,10 +30,16 @@
                 <label for="angka1">Angka 1 : </label>
                 <input type="text" id="angka1" name="angka1">
             </div>
+            @error('angka1')
+            <div class="error">{{ $message }}</div>
+            @enderror
             <div class="angka2">
                 <label for="angka2">Angka 2 : </label>
                 <input type="text" id="angka2" name="angka2">
             </div>
+            @error('angka2')
+                <div class="error">{{ $message }}</div>
+            @enderror
             <button type="submit">Tambah</button>
         </form>
 
