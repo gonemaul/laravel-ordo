@@ -13,4 +13,8 @@ class FirstController extends Controller
     public function perkalian($angka){
         return $angka * 2;
     }
+
+    public function tambah(Request $request){
+        return $request->query('angka1') + $request->query('angka2');
+    }
 }

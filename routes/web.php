@@ -21,3 +21,5 @@ Route::get('/', function () {
 Route::get('/hello', [FirstController::class, 'index']);
 
 Route::get('/perkalian/{angka}', [FirstController::class, 'perkalian']);
+
+Route::get('/tambah', [FirstController::class, 'tambah']);
