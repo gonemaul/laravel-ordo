@@ -16,6 +16,6 @@ class FirstController extends Controller
 
     public function tambah(Request $request){
         $hasil = $request->query('angka1') + $request->query('angka2');
-        return view('hasil')->with('hasil', $hasil);
+        return view('view')->with('hasil', $hasil);
     }
 }
