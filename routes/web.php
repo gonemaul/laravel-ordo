@@ -26,6 +26,6 @@ Route::get('/perkalian/{angka}', [FirstController::class, 'perkalian']);
 Route::get('/tambah', [FirstController::class, 'tambah']);
 
 Route::get('/create', [CarsController::class, 'create'])->name('create');
-Route::post('/insert', [CarsController::class, 'insert'])->name('insert');
+Route::get('/insert', [CarsController::class, 'insert'])->name('insert');
 
 Route::get('/show', [CarsController::class, 'show'])->name('show');

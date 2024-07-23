@@ -8,19 +8,19 @@ use Illuminate\Http\Request;
 class CarsController extends Controller
 {
     public function create(){
-        return view('create');
+        // return view('create');
+        return redirect()->route('insert');
     }
 
     public function insert(Request $request){
-        $validatedData = $request->validate([
-            'nama' => ['required','string','max:255'],
-            'jenis' => ['required','string','max:255'],
-            'harga' => ['required','numeric'],
-            'tanggal_pembuatan' => ['required','date']
-        ]);
 
-        // return $request;
-        Car::create($validatedData);
+        Car::create([
+            'nama' => 'Brio',
+            'jenis' => 'Manual',
+            'harga' => 21000000,
+            'tanggal_pembuatan' => '2004-12-11',
+            'manufacture_id' => 1
+        ]);
 
         return redirect()->route('show');
     }

@@ -17,5 +17,14 @@
     <h3 style="margin-top: 3rem;">Manufacture</h3>
     <p>Nama : {{ $car->manufacture->nama }}</p>
     <p>Alamat : {{ $car->manufacture->alamat }}</p>
+
+    <h3 style="margin-top: 3rem;">Review</h3>
+    <hr>
+    @foreach ($car->review as $item)
+        <p>Nilai : {{ $item->nilai }}</p>
+        <p>Nama : {{ $item->nama }}</p>
+        <p>Isi : {{ $item->isi }}</p>
+        <hr>
+    @endforeach
 </body>
 </html>
