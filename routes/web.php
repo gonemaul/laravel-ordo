@@ -23,3 +23,8 @@ Route::get('/hello', [FirstController::class, 'index']);
 Route::get('/perkalian/{angka}', [FirstController::class, 'perkalian']);
 
 Route::get('/tambah', [FirstController::class, 'tambah']);
+
+Route::get('/create', [FirstController::class, 'create'])->name('create');
+Route::post('/insert', [FirstController::class, 'insert'])->name('insert');
+
+Route::get('/show', [FirstController::class, 'show'])->name('show');
