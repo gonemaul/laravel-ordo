@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Car;
+use App\Models\Feature;
 use Illuminate\Http\Request;
 
 class CarsController extends Controller
@@ -27,6 +28,6 @@ class CarsController extends Controller
 
     public function show(){
         $car = Car::where('jenis', 'manual')->first();
-        return view('show', ['car' => $car]);
+        return view('show', ['car' => $car,]);
     }
 }

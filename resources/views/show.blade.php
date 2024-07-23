@@ -13,18 +13,23 @@
         <p>Harga : {{  $car->harga }}</p>
         <p>Tanggal Pembuatan : {{ $car->tanggal_pembuatan }}</p>
     </div>
-
-    <h3 style="margin-top: 3rem;">Manufacture</h3>
+    <br>
+    <h3>Manufacture</h3>
     <p>Nama : {{ $car->manufacture->nama }}</p>
     <p>Alamat : {{ $car->manufacture->alamat }}</p>
-
-    <h3 style="margin-top: 3rem;">Review</h3>
+    <br>
+    <h3>Review</h3>
     <hr>
-    @foreach ($car->review as $item)
+    @foreach ($car->reviews as $item)
         <p>Nilai : {{ $item->nilai }}</p>
         <p>Nama : {{ $item->nama }}</p>
         <p>Isi : {{ $item->isi }}</p>
         <hr>
+    @endforeach
+    <br>
+    <h3>Feature</h3>
+    @foreach ($car->features as $item)
+        <p>{{ $item->nama }}</p>
     @endforeach
 </body>
 </html>
