@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CarsController;
 use App\Http\Controllers\FirstController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,7 +25,7 @@ Route::get('/perkalian/{angka}', [FirstController::class, 'perkalian']);
 
 Route::get('/tambah', [FirstController::class, 'tambah']);
 
-Route::get('/create', [FirstController::class, 'create'])->name('create');
-Route::post('/insert', [FirstController::class, 'insert'])->name('insert');
+Route::get('/create', [CarsController::class, 'create'])->name('create');
+Route::post('/insert', [CarsController::class, 'insert'])->name('insert');
 
-Route::get('/show', [FirstController::class, 'show'])->name('show');
+Route::get('/show', [CarsController::class, 'show'])->name('show');
