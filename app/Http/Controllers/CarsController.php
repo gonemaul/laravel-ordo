@@ -27,7 +27,7 @@ class CarsController extends Controller
     }
 
     public function show(){
-        $car = Car::where('jenis', 'manual')->first();
+        $car = Car::where('jenis', 'Sedan')->first();
         return view('show', ['car' => $car,]);
     }
 }
