@@ -13,5 +13,9 @@
         <p>Harga : {{  $car->harga }}</p>
         <p>Tanggal Pembuatan : {{ $car->tanggal_pembuatan }}</p>
     </div>
+
+    <h3 style="margin-top: 3rem;">Manufacture</h3>
+    <p>Nama : {{ $car->manufacture->nama }}</p>
+    <p>Alamat : {{ $car->manufacture->alamat }}</p>
 </body>
 </html>
